@@ -8,17 +8,20 @@ public class Main {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		int N = sc.nextInt();
-		int soma = 0;
-		for (int i=0; i<N; i++) {
-			int x = sc.nextInt();
-			soma =soma + x;
+		char resp;	
+		do {
+			System.out.print("Digite a temperatura em Celsius");
+			double C = sc.nextDouble();
+			double F = 9.0 * C / 5.0 + 32.0;
+			System.out.printf("Equivalente em Fahrenheit: %.1f%n", F);
+			System.out.println("Deseja repetir (S/N)? ");
+			resp = sc.next().charAt(0);
 					
-			
-		}
-			
-		System.out.println(soma);
+		} while (resp != 'N');
+		
 		sc.close();
 			
+		}
+						
+			
 	}
-}
